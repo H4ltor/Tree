@@ -5,13 +5,10 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatCardModule } from '@angular/material/card';
-import { MatButtonModule} from '@angular/material/button';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { MatIconModule } from '@angular/material/icon';
+import {MaterialModule} from './_sharedHome/material/material.module';
+
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CardHomeComponent } from './home/card-home/card-home.component';
+import { CardHomeComponent } from './Home/card-home/card-home.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +19,7 @@ import { CardHomeComponent } from './home/card-home/card-home.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule,
-    MatMenuModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatCardModule,
+    MaterialModule,
     FlexLayoutModule,
   ],
   providers: [],
