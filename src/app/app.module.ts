@@ -9,11 +9,13 @@ import {MaterialModule} from './_sharedHome/material/material.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardHomeComponent } from './Home/card-home/card-home.component';
+import { HeaderHomeComponent } from './Home/header-home/header-home.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CardHomeComponent
+    CardHomeComponent,
+    HeaderHomeComponent
   ],
   imports: [
     BrowserModule,
