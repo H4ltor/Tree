@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MenuItem } from './menu-item';
 
 @Component({
   selector: 'app-header-home',
@@ -8,20 +7,6 @@ import { MenuItem } from './menu-item';
 })
 export class HeaderHomeComponent implements OnInit {
 
-  menuItems: MenuItem[] = [
-    {
-      label: 'Sign Up',
-      icon: 'login'
-    },
-    {
-      label: 'New',
-      icon: 'add'
-    },
-    {
-      label: 'Contact',
-      icon: 'talk'
-    },
-  ];
   
   constructor() { }
 

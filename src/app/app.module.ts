@@ -9,13 +9,20 @@ import {MaterialModule} from './_sharedHome/material/material.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardHomeComponent } from './Home/card-home/card-home.component';
-import { HeaderHomeComponent } from './Home/header-home/header-home.component';
+import { RegisterComponent } from './register/register.component';
+import { LoginComponent } from './login/login.component';
+import { HeaderHomeComponent } from './home/header-home/header-home.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+
 
 @NgModule({
   declarations: [
     AppComponent,
     CardHomeComponent,
-    HeaderHomeComponent
+    HeaderHomeComponent,
+    RegisterComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -23,6 +30,8 @@ import { HeaderHomeComponent } from './Home/header-home/header-home.component';
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
+    FormsModule, 
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
