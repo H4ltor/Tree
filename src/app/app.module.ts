@@ -9,10 +9,11 @@ import {MaterialModule} from './_sharedHome/material/material.module';
 
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { CardHomeComponent } from './Home/card-home/card-home.component';
-import { RegisterComponent } from './register/register.component';
-import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './users/register/register.component';
+import { LoginComponent } from './users/login/login.component';
 import { HeaderHomeComponent } from './home/header-home/header-home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 
 
@@ -32,6 +33,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     FlexLayoutModule,
     FormsModule, 
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
