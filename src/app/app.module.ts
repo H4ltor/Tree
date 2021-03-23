@@ -14,6 +14,7 @@ import { LoginComponent } from './users/login/login.component';
 import { HeaderHomeComponent } from './home/header-home/header-home.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AuthService } from './users/auth.service';
 
 
 
@@ -35,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
