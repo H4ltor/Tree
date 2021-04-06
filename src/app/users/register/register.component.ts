@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { AuthService } from '../auth.service';
 
 @Component({
@@ -16,16 +17,20 @@ export class RegisterComponent implements OnInit {
     password: new FormControl(),
   });
 
-  constructor(private authService: AuthService) {}
+  constructor(private authService: AuthService,
+    private _router: Router) {}
 
   ngOnInit() {}
 
   registerUser() {
-    console.log(this.registerForm)
     this.authService.registerUser(this.registerForm.value)
     .subscribe(
-      (      res: any) => console.log(res),
-      (      err: any) => console.log(err)
+        res => {
+          console.log(res)
+          localStorage.setItem('token', res.token)
+          this._router.navigate(['/login'])
+        },
+        err => console.log(err)
       )
   }
 

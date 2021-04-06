@@ -7,7 +7,7 @@ import { RegisterComponent } from './users/register/register.component';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'user',
     component:CardHomeComponent
   },
   {
