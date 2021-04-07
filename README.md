@@ -8,6 +8,7 @@ Le server de ce projet est stocké dans un autre répo, veuillez vous rendre sur
 
 # Lancement
 
+Lancez **npm install** avant d'initialisez le site
 Veuillez utilisez la commande **ng serve --o** pour lancez l'angular, l'option *--o* permettant de lancez directement une nouvelle fenètre dans votre navigateur.
 
 
