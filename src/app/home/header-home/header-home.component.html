@@ -3,10 +3,10 @@
   <span fxFlex>Tropicana</span>
   <span class="menu-spacer"></span>
     <div>
-      <a mat-button [routerLink]="['/register']">Register</a>
-      <a mat-button [routerLink]="['/login']">Login</a>
+      <a mat-button [routerLink]="['/register']" *ngIf="!_authService.loggedIn()">Register</a>
+      <a mat-button [routerLink]="['/login']" *ngIf="!_authService.loggedIn()">Login</a>
       <a mat-button [routerLink]="['/news']">New</a>
-      
+      <a mat-button *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
 
     </div>
 </mat-toolbar>
