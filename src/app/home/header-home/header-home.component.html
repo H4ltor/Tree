@@ -1,0 +1,11 @@
+<mat-toolbar fxLayout="row" color="warn">
+  <img src="../../../assets/logo.png" class="header-logo">
+  <span fxFlex>Tropicana</span>
+  <span class="menu-spacer"></span>
+  <div>
+    <a mat-button [routerLink]="['/register']" *ngIf="!_authService.loggedIn()">Register</a>
+    <a mat-button [routerLink]="['/login']" *ngIf="!_authService.loggedIn()">Login</a>
+    <a mat-button [routerLink]="['/news']" type="button" (click)="openDialog()">New</a>
+    <a mat-button *ngIf="_authService.loggedIn()" (click)="_authService.logoutUser()">Logout</a>
+  </div>
+</mat-toolbar>

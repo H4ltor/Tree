@@ -1,18 +1,24 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/users/auth.service';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { FormComponent } from 'src/app/form/form.component';
 import { Card } from 'src/app/_shared/_models/card';
 import { CardService } from 'src/app/_shared/_service/card.service';
+
 @Component({
-  selector: 'app-card-home',
-  templateUrl: './card-home.component.html',
-  styleUrls: ['./card-home.component.scss']
+  selector: 'app-header-home',
+  templateUrl: './header-home.component.html',
+  styleUrls: ['./header-home.component.scss']
 })
-export class CardHomeComponent implements OnInit {
+export class HeaderHomeComponent implements OnInit {
 
   public cards: Card[] = [];
-  constructor(private dialog: MatDialog,
+
+  constructor(public _authService: AuthService,
+    private dialog: MatDialog,
     private cardService: CardService) { }
+
+  
 
   ngOnInit() {
     this.cards = this.cardService.cards;
