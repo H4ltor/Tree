@@ -4,9 +4,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import {MaterialModule} from './_sharedHome/material/material.module';
+import {MaterialModule} from './_shared/material/material.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { CardHomeComponent } from './Home/card-home/card-home.component';
+import { CardHomeComponent } from './home/card-home/card-home.component';
 import { RegisterComponent } from './users/register/register.component';
 import { LoginComponent } from './users/login/login.component';
 import { HeaderHomeComponent } from './home/header-home/header-home.component';
@@ -15,6 +15,7 @@ import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common
 import { AuthService } from './users/auth.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
+import { FormComponent } from './form/form.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { TokenInterceptorService } from './token-interceptor.service';
     CardHomeComponent,
     HeaderHomeComponent,
     RegisterComponent,
-    LoginComponent
+    LoginComponent,
+    FormComponent,
   ],
   imports: [
     BrowserModule,

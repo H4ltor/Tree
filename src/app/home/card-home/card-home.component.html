@@ -1,4 +1,4 @@
-<div class="content">
+<!--<div class="content">
   <div fxLayout="row wrap" fxLayoutGap="16px grid">
     <div fxFlex="25%" *ngFor="let num of [1,2,3,4,5,6,7]">
     <mat-card class="mat-elevation-z4">
@@ -20,5 +20,51 @@
         <button mat-button>SHARE</button>
       </mat-card-actions>
     </mat-card>
+  </div>
+</div>-->
+
+
+<!--<div class="content">
+  <div fxLayout="row wrap" fxLayoutGap="16px grid">
+    <div fxFlex="25%">
+      <mat-card  *ngFor="let card of cards;let index = index">
+        <mat-card-header>
+          <mat-card-title>{{card.comment}}
+            <button type="button" mat-raised-button color="primary" (click)="editData(index, card)">Modifier</button>
+          </mat-card-title>
+        </mat-card-header>
+          <mat-card-content>
+            <span>{{card.prix}}</span>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>LIKE</button>
+            <button mat-button>SHARE</button>
+          </mat-card-actions>
+      </mat-card>
+    </div>
+  </div>
+</div>-->
+
+<div class="container">
+  <div>
+    <div fxLayout="row wrap" fxLayoutGap="16px grid">
+      <div class="container-2">
+          <mat-card *ngFor="let card of cards;let index = index">
+              <mat-card-header>
+                  <mat-card-title>{{card.comment}}
+                      <button type="button" mat-raised-button color="warn" (click)="editData(index, card)">Modifier</button>
+                  </mat-card-title>
+              </mat-card-header>
+              <mat-card-content>
+                  <span>{{card.prix}}</span>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+          </mat-card>
+        </div>
+      </div>
+
   </div>
 </div>
