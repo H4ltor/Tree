@@ -59,8 +59,11 @@
                   <span>{{card.prix}}</span>
               </mat-card-content>
               <mat-card-actions>
-                <button mat-button>LIKE</button>
-                <button mat-button>SHARE</button>
+                <button mat-button (click)="onLoveIt($event)">👍 {{likeService.like}}</button>
+                <button mat-button (click)="dontLoveIt($event)">👎 {{likeService.dislike}}</button>
+              </mat-card-actions>
+              <mat-card-actions>
+                <button class="btn btn-md btn-info" (click)="_addItemToShop(card._id)">Ajouter au pannier</button>
               </mat-card-actions>
           </mat-card>
         </div>

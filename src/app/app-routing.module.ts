@@ -5,6 +5,7 @@ import { CardHomeComponent } from './home/card-home/card-home.component';
 
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
+import { ShopComponent } from './shop/shop.component';
 
 const routes: Routes = [
   {
@@ -24,7 +25,10 @@ const routes: Routes = [
     component:CardHomeComponent,
     canActivate: [AuthGuard]
   },
-  
+  {
+    path: 'shop',
+    component:ShopComponent,
+  }
 ];
 
 @NgModule({

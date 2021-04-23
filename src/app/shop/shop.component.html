@@ -1,0 +1,32 @@
+<section>
+    <div class="spacer">
+      <div class="container">
+        <div class="row mt-5">
+          <div class="col-lg-9">
+            <div class="row shop-listing">
+              <table class="table shop-table" *ngIf="shop">
+                <tr>
+                  <th class="b-0">Name</th>
+                  <th class="b-0">Price</th>
+                  <th class="b-0 text-right">Total Price</th>
+                </tr>
+                <tr *ngFor="let card of shop.items">
+                  <td>{{ card.cardId.name }}</td>
+                  <td>{{ card.cardId.price }}</td>
+                  <td class="text-right">
+                    <h5 class="font-medium m-b-30">{{ item.total }}</h5>
+                  </td>
+                </tr>
+                <tr>
+                  <td colspan="3" align="right">Subtotal :{{ shop.subTotal }}</td>
+                  <td colspan="4" align="right">
+                    <button class="btn btn-danger" (click)="_emptyShop()">Pannier vide</button>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

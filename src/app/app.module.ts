@@ -16,6 +16,7 @@ import { AuthService } from './users/auth.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { FormComponent } from './form/form.component';
+import { ShopComponent } from './shop/shop.component';
 
 
 @NgModule({
@@ -26,18 +27,19 @@ import { FormComponent } from './form/form.component';
     RegisterComponent,
     LoginComponent,
     FormComponent,
-  ],
+    ShopComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MaterialModule,
     FlexLayoutModule,
-    FormsModule, 
+    FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
   ],
-  providers: [AuthService, AuthGuard, 
+  providers: [AuthService, AuthGuard,
   {
     provide: HTTP_INTERCEPTORS,
     useClass: TokenInterceptorService,

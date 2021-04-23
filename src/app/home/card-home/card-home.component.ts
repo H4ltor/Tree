@@ -1,8 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { FormComponent } from 'src/app/form/form.component';
 import { Card } from 'src/app/_shared/_models/card';
 import { CardService } from 'src/app/_shared/_service/card.service';
+import { LikeService } from 'src/app/_shared/_service/like.service';
+import { AuthService } from '../../users/auth.service';
 @Component({
   selector: 'app-card-home',
   templateUrl: './card-home.component.html',
@@ -11,11 +13,40 @@ import { CardService } from 'src/app/_shared/_service/card.service';
 export class CardHomeComponent implements OnInit {
 
   public cards: Card[] = [];
+  public like: number = 0;
+  public dislike: number = 0;
+  public isLiked: boolean = true;
+  public isDisliked: boolean = true;
+  //@Input() postLoveIts: number;
+
   constructor(private dialog: MatDialog,
-    private cardService: CardService) { }
+    private cardService: CardService, public likeService: LikeService,
+    private authService: AuthService) { }
 
   ngOnInit() {
     this.cards = this.cardService.cards;
+    this.like = this.likeService.like;
+  }
+
+  onLoveIt(event: any) {
+    this.likeService.like++;
+    if(this.likeService.like >= 1) {
+      this.likeService.like = 1;
+    }
+    if(this.isDisliked == true) {
+      this.isDisliked = false;
+    }
+    this.isLiked = true;
+    console.log(this.likeService.like);
+
+  }
+  dontLoveIt(event: any) {
+   this.likeService.dislike--;
+
+   if(this.likeService.dislike >= -1) {
+   this.likeService.dislike = 1;
+   }
+   console.log(this.likeService.dislike);
   }
 
   addCard(card: Card) {
@@ -49,5 +80,21 @@ export class CardHomeComponent implements OnInit {
       }
     });
   }
-
-}
+  //test ----
+  _getCards(): void {
+    this.authService.getAllCards().subscribe((data: any) => {
+      this.cards = data.data;
+      console.log(this.cards);
+    });
+    }
+    // pas besoin de quantity pour le addIteamShop
+    _addItemToShop(id): void {
+      let payload = {
+        cardId: id,
+    };
+    this.authService.addToShop(payload).subscribe(() => {
+      this._getCards();
+      alert('Card Ajoutée');
+    });
+    }
+  }
