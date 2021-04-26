@@ -3,3 +3,21 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+ body {
+    color:black;
+    background-image:url(https://diapogram.com/upload/2019/04/11/20190411231606-45247e79.jpg);
+    margin:0;
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+    }
+
+    .box {
+      
+      padding: 30px;
+      background: #fff;
+      margin-top:250px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+  }

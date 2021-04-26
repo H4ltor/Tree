@@ -3,6 +3,7 @@
   <span fxFlex>Tropicana</span>
   <span class="menu-spacer"></span>
   <div>
+    <a mat-button [routerLink]="['/tropicana']">Home</a>
     <a mat-button [routerLink]="['/register']" *ngIf="!_authService.loggedIn()">Register</a>
     <a mat-button [routerLink]="['/login']" *ngIf="!_authService.loggedIn()">Login</a>
     <a mat-button [routerLink]="['/news']" type="button" (click)="openDialog()">New</a>

@@ -1,6 +1,6 @@
-.content {
+/*.content {
   padding: 16px;
-}
+}*/
 
 .content > mat-card {
   width: 200px;
@@ -9,3 +9,30 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+  body {
+    color:black;
+    height: 90vh;
+    width: 100%;
+    overflow-x: hidden;
+    background-image:url(https://diapogram.com/upload/2019/04/11/20190411231606-45247e79.jpg);
+    margin:0;
+    background-attachment: local;
+    }
+
+
+  .container-2 {
+      
+    padding: 30px;
+    width: 90%;
+    margin: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px -3px rgba(0, 0, 0, .1);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   justify-content: space-evenly;
+   
+
+
+}

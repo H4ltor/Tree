@@ -5,6 +5,9 @@ import { CardHomeComponent } from './home/card-home/card-home.component';
 
 import { LoginComponent } from './users/login/login.component';
 import { RegisterComponent } from './users/register/register.component';
+import {AboutComponent} from './about/about.component';
+import {TropicanaComponent} from './tropicana/tropicana.component';
+
 
 const routes: Routes = [
   {
@@ -23,6 +26,14 @@ const routes: Routes = [
     path: 'news',
     component:CardHomeComponent,
     canActivate: [AuthGuard]
+  },
+  {
+    path: 'about',
+    component:AboutComponent,
+  },
+  {
+    path: 'tropicana',
+    component:TropicanaComponent,
   },
   
 ];

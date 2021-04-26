@@ -16,17 +16,23 @@ import { AuthService } from './users/auth.service';
 import { AuthGuard } from './auth.guard';
 import { TokenInterceptorService } from './token-interceptor.service';
 import { FormComponent } from './form/form.component';
+import { AboutComponent } from './about/about.component';
+import { TropicanaComponent } from './tropicana/tropicana.component';
+import { FooterHomeComponent } from './home/footer-home/footer-home.component';
 
 
 @NgModule({
-  declarations: [
+  declarations: [		
     AppComponent,
     CardHomeComponent,
     HeaderHomeComponent,
     RegisterComponent,
     LoginComponent,
     FormComponent,
-  ],
+    AboutComponent,
+    TropicanaComponent,
+    FooterHomeComponent
+   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
