@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from 'src/app/users/auth.service';
+import { AuthService } from 'src/app/_shared/_service/auth.service';
 import {MatDialog, MatDialogConfig} from "@angular/material/dialog";
 import { FormComponent } from 'src/app/form/form.component';
 import { Card } from 'src/app/_shared/_models/card';

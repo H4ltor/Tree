@@ -39,7 +39,7 @@ export class FormComponent implements OnInit {
 
   sendData() {
     if(this.newsForm.valid) {
-      this.dialogRef.close(new Card(this.newsForm.controls['comment'].value, this.newsForm.controls['prix'].value))
+      this.dialogRef.close(new Card(this.newsForm.controls['comment'].value))
     }
   }
 }
