@@ -11,6 +11,12 @@ import { CardService } from 'src/app/_shared/_service/card.service';
 export class CardHomeComponent implements OnInit {
 
   public cards: Card[] = [];
+  public like = 0;
+  public disLike = 0;
+
+  public isLiked: boolean = true;
+  public isDisliked: boolean = true;
+
   constructor(private dialog: MatDialog,
     private cardService: CardService) { }
 
@@ -20,6 +26,13 @@ export class CardHomeComponent implements OnInit {
 
   addCard(card: Card) {
     this.cardService.cards.push(card);
+  }
+
+  likeButton() {
+    if(this.isLiked == true) {
+      this.isDisliked = false;
+      this.isLiked = true;
+    }
   }
 
   openDialog() {
