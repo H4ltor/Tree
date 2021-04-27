@@ -12,7 +12,7 @@ export class FormComponent implements OnInit {
 
   public title: string;
 
-  
+
   newsForm = new FormGroup({
     comment: new FormControl('',Validators.required),
     prix: new FormControl(),
@@ -32,14 +32,15 @@ export class FormComponent implements OnInit {
 
   createForm() {
     this.newsForm = new FormGroup({
-      comment: new FormControl('',Validators.required),
-      prix: new FormControl()
+      title: new FormControl('',Validators.required),
+      comment: new FormControl()
     });
   }
 
   sendData() {
     if(this.newsForm.valid) {
-      this.dialogRef.close(new Card(this.newsForm.controls['comment'].value))
+      this.dialogRef.close(new Card(this.newsForm.controls['title'].value,
+      this.newsForm.controls['comment'].value))
     }
   }
 }

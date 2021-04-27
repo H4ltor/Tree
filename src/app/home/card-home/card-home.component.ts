@@ -13,7 +13,6 @@ export class CardHomeComponent implements OnInit {
   public cards: Card[] = [];
   public like = 0;
   public disLike = 0;
-
   public isLiked: boolean = true;
   public isDisliked: boolean = true;
 
@@ -28,10 +27,9 @@ export class CardHomeComponent implements OnInit {
     this.cardService.cards.push(card);
   }
 
-  likeButton() {
+  likeButtonClick() {
     if(this.isLiked == true) {
-      this.isDisliked = false;
-      this.isLiked = true;
+      this.like++;
     }
   }
 

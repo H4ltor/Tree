@@ -8,7 +8,12 @@
   
         <mat-card-content>
           <mat-form-field appearance="outline">
-            <input formControlName="comment" matInput name="comment" matInput placeholder="Annonce" formControlName="comment" required>
+            <input formControlName="title" matInput name="title" matInput placeholder="Annonce"
+            formControlName="title" required>
+          </mat-form-field>
+          <mat-form-field appearance="outline">
+            <input formControlName="comment" matInput name="comment" matInput placeholder="Description"
+            formControlName="comment" required>
           </mat-form-field>
         </mat-card-content>
         <button type="submit" mat-stroked-button color="warn" class="btn-block">Create</button>
